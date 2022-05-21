@@ -1,0 +1,17 @@
+mode = "растёт"
+sizeEllipse = 0
+
+
+def setup():
+    size(1000,1000)
+def draw():
+    
+    stroke(random(0,255),random(0,255),random(0,255))
+    fill(random(100,250),random(100,255),random(100,255))
+    global sizeEllipse , mode
+    translate(300,200)
+    ellipse(0,0, sizeEllipse, sizeEllipse )
+    if mode == "растёт":
+        sizeEllipse = sizeEllipse + 1
+    if sizeEllipse >= 900:
+        mode = "уменьшается"
